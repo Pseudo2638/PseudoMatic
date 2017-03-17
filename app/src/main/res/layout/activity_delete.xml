@@ -8,16 +8,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/test1"
-
+    android:background="@drawable/backk"
     tools:context="com.example.hp.pseudomatic.DeleteActivity">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/back7"
+            android:text="back"
+            android:background = "@drawable/roundedbutton"
+            android:layout_height="20dp"
+            android:layout_marginBottom="20dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:text="Delete"
+                android:background = "@drawable/roundedbutton"
                 android:id="@+id/deleteRoll"/>
 
         </LinearLayout>
@@ -73,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:text="Delete"
+                android:background = "@drawable/roundedbutton"
                 android:id="@+id/deleteId"/>
 
 
@@ -93,6 +101,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
                 android:text="Choose"
+                android:background = "@drawable/roundedbutton"
                 android:id="@+id/choosebtn"
                 />
         </LinearLayout>

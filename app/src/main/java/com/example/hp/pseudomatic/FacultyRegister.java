@@ -1,12 +1,16 @@
 package com.example.hp.pseudomatic;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class FacultyRegister extends AppCompatActivity {
     // Decleration
+    Button backbutton5;
     EditText fname,lname,id,email,phone,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,22 @@ public class FacultyRegister extends AppCompatActivity {
         email = (EditText) findViewById(R.id.et_email);
         phone = (EditText)findViewById(R.id.et_phone);
         password = (EditText) findViewById(R.id.et_password);
+
+        // Back Button is being Declared in the
+        // below Steps and the linking with the xml
+        // is done below.
+
+        backbutton5 = (Button) findViewById(R.id.back5);
+
+        backbutton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(FacultyRegister.this, "Thank You.", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(FacultyRegister.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 

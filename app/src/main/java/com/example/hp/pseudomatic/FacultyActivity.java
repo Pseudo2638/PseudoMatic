@@ -33,7 +33,7 @@ import android.app.ProgressDialog;
 
         // Decleration
         private EditText editTextId;
-        private Button buttonGet, deletebutton,timetablebutton;
+        private Button buttonGet, deletebutton,timetablebutton, backbutton6;
         private TextView textViewResult;
 
         private ProgressDialog loading;
@@ -50,6 +50,22 @@ import android.app.ProgressDialog;
             deletebutton = (Button) findViewById(R.id.deletebtn);
             textViewResult = (TextView) findViewById(R.id.textViewResult);
 
+            // Back Button is being Declared in the
+            // below Steps and the linking with the xml
+            // is done below.
+
+            backbutton6 = (Button) findViewById(R.id.back6);
+
+            backbutton6.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Toast.makeText(FacultyActivity.this, "Thank You.", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(FacultyActivity.this,MainActivity.class);
+                    startActivity(i);
+                }
+            });
+
             // New Activity if Clicked.
             deletebutton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -58,6 +74,8 @@ import android.app.ProgressDialog;
                     startActivity(myIntent);
                 }
             });
+
+            // New Acitivity Opened ifClicked
             timetablebutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -69,16 +87,25 @@ import android.app.ProgressDialog;
             buttonGet.setOnClickListener(this);
         }
 
+        // This Takes the input from the user edit text and checks that it matches
+        // in the database entries or not.
         private void getData() {
+            // String Conversion
             String id = editTextId.getText().toString().trim();
+            // Checking
             if (id.equals("")) {
+
+                // This line of code makes a notification to display
+                // When pressed on the button
                 Toast.makeText(this, "Please enter an id", Toast.LENGTH_LONG).show();
                 return;
             }
             loading = ProgressDialog.show(this,"Please wait...","Fetching...",false,false);
 
+            // Checkin String Of the Database Storage URL
             String url = Config.DATA_URL+editTextId.getText().toString().trim();
 
+            // If data matches
             StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -86,6 +113,7 @@ import android.app.ProgressDialog;
                     showJSON(response);
                 }
             },
+                    // If not matches
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
@@ -98,6 +126,9 @@ import android.app.ProgressDialog;
         }
 
         private void showJSON(String response){
+
+            // This is used to get responce from the user entry to feed
+            // in the database
             String fname="";
             String lname="";
             String rollno = "";
@@ -111,6 +142,10 @@ import android.app.ProgressDialog;
 
 
             try {
+
+                // The Below Code Uses JSON to Fetch
+                // Responce of the url we searched for and assigns
+                // Index while fetching the inputs in the database
                 JSONObject jsonObject = new JSONObject(response);
                 JSONArray result = jsonObject.getJSONArray(Config.JSON_ARRAY);
                 JSONObject collegeData = result.getJSONObject(0);

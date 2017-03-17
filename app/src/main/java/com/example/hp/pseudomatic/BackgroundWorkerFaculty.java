@@ -62,6 +62,7 @@ public class BackgroundWorkerFaculty extends AsyncTask<String,Void,String> {
                 outputStream.close();
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                // Decleration
                 String result="";
                 String line="";
                 while((line = bufferedReader.readLine())!= null) {

@@ -45,6 +45,9 @@ import android.content.Intent;
             String username = UsernameEt.getText().toString();
             String password = PasswordEt.getText().toString();
             String type = "login";
+            // This is a Java class which is used to fetch
+            // Details rom the hosting database
+            // Created Online
             BackgroundWorkerFaculty backgroundWorker = new BackgroundWorkerFaculty(this);
             backgroundWorker.execute(type, username, password);
         }

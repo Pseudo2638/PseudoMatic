@@ -8,16 +8,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/test1"
+    android:background="@drawable/backk"
     tools:context="com.example.hp.pseudomatic.AboutActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:textSize="20dp"
-        android:layout_marginTop="150dp"
         android:textStyle="italic"
         android:textAllCaps="true"
-        android:text="this is an under development project done by : (aditya sudhakar) and (ankit giri) and the title of this project is (GPS PLOTTER FOR ATTENDANCE MANAGEMENT)"/>
+        android:text="this is an under development project done by : (aditya sudhakar) and (ankit giri) and the title of this project is (GPS PLOTTER FOR ATTENDANCE MANAGEMENT)"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="94dp"
+        android:id="@+id/textView4" />
+
+    <Button
+        android:layout_width="wrap_content"
+       android:id="@+id/back9"
+        android:text="back"
+        android:background = "@drawable/roundedbutton"
+        android:layout_height="20dp" />
 </RelativeLayout>

@@ -18,8 +18,9 @@ package com.example.hp.pseudomatic;
     public static final String KEY_year = "year";
     public static final String KEY_semester = "semester";
     public static final String KEY_stream = "stream";
-
-
         public static final String JSON_ARRAY = "result";
+
+
+
     }
 

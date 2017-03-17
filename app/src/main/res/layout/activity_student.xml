@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/test1"
+    android:background="@drawable/backk"
     tools:context="com.example.hp.pseudomatic.StudentActivity">
 
         <LinearLayout
@@ -16,6 +16,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/back3"
+                android:text="back"
+                android:background = "@drawable/roundedbutton"
+                android:layout_height="20dp"
+                android:layout_marginBottom="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,14 +65,16 @@
             android:weightSum="1">
 
             <Button
-                android:layout_width="357dp"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:text=" Mark Automatically"
+                android:background = "@drawable/roundedbutton"
                 android:layout_weight="1" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:background = "@drawable/roundedbutton"
                 android:text="Mark Manually"/>
         </LinearLayout>
 

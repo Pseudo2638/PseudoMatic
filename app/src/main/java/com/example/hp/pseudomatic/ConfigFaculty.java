@@ -13,6 +13,9 @@ public class ConfigFaculty {
     public static final String KEY_email = "email";
     public static final String KEY_password = "password";
     public static final String KEY_phone = "phone";
-
     public static final String JSON_ARRAY = "result";
+
+
+    // This code stub is under development
+    // Please Overlook
 }

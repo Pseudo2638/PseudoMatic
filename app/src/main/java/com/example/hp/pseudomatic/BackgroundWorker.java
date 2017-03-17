@@ -42,7 +42,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         // Online Webhosting URL for PHP connections.
         String login_url = "http://pseudoattendance.pe.hu/login.php";
         String register_url = "http://pseudoattendance.pe.hu/register.php";
-        String faculty_register_url = "http://pseudoattendance.pe.hu/registerFacu lty.php";
+        String faculty_register_url = "http://pseudoattendance.pe.hu/registerFaculty.php";
         // if " login " called
         if(type.equals("login")) {
             try {
